@@ -1,7 +1,7 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
-import lombok.val;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +13,7 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * @author kangmoo Heo
  */
+@Repository
 public class MemoryMemberRepository implements MemberRepository{
     private Map<Long, Member> store = new ConcurrentHashMap<>();
     private AtomicLong sequence = new AtomicLong();

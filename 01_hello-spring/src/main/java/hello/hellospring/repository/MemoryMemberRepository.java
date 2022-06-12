@@ -13,7 +13,6 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * @author kangmoo Heo
  */
-@Repository
 public class MemoryMemberRepository implements MemberRepository{
     private Map<Long, Member> store = new ConcurrentHashMap<>();
     private AtomicLong sequence = new AtomicLong();

@@ -12,11 +12,9 @@ import java.util.Optional;
 /**
  * @author kangmoo Heo
  */
-@Service
 public class MemberService {
     private final MemberRepository memberRepository;
 
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }

@@ -6,12 +6,14 @@ import hello.hellospring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
 /**
  * @author kangmoo Heo
  */
+@Transactional
 public class MemberService {
     private final MemberRepository memberRepository;
 
